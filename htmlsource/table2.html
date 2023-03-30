@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 600px;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+      }
+      th,
+      td {
+        border: 2px solid blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <!--b
+        표 태그
+        <table>,<tr>,컬럼 : <td>,<th>=> 가운데 정렬, 굵게
+
+        셀 병합
+        1) 행 병합 : colspan
+        2) 열 병합 : rowspan
+        
+    -->
+    <table>
+      <tr>
+        <td colspan="2">내용1</td>
+      </tr>
+      <tr>
+        <td>내용3</td>
+        <td>내용4</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th>제목</th>
+        <td rowspan="2">내용1</td>
+
+        <td>내용2</td>
+      </tr>
+      <tr>
+        <th>제목</th>
+        <td>내용3</td>
+      </tr>
+    </table>
+
+    <table>
+      <th>제목</th>
+      <th>제목</th>
+      <tr>
+        <td colspan="2">내용1</td>
+      </tr>
+      <tr>
+        <td>내용3</td>
+        <td>내용4</td>
+      </tr>
+    </table>
+  </body>
+</html>
