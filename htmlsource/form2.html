@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        사용자에게 여러개를 선택할 수 있는 옵션 제공시
+        checkbox : 이름은 동일하게, value는 체크박스를 선택했을 때 보여줄(전송) 값으로 작성(변경 가능한 기본값)
+
+        사용자가 하나만 선택하도록
+        radio : check와 동일
+        ex)성별
+    -->
+    <form action="form1.html" method="get">
+      <h3>수강 분야(다수 선택)</h3>
+      <ul>
+        <li>
+          <label
+            ><input
+              type="checkbox"
+              name="subject"
+              value="문법"
+              id=""
+            />문법</label
+          >
+        </li>
+        <li>
+          <label
+            ><input
+              type="checkbox"
+              name="subject"
+              id=""
+              value="작문"
+              checked
+            />작문</label
+          >
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            name="subject"
+            id=""
+            value="독해"
+            checked
+          />독해
+        </li>
+      </ul>
+
+      <h3>수강 분야(하나 선택)</h3>
+      <ul>
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="subject1"
+              value="문법"
+              id=""
+            />문법</label
+          >
+        </li>
+        <li>
+          <label
+            ><input
+              type="radio"
+              name="subject2"
+              id=""
+              value="작문"
+            />작문</label
+          >
+        </li>
+        <li><input type="radio" name="subject3" id="" value="독해" />독해</li>
+      </ul>
+      <div>
+        <input type="submit" value="전송" />
+      </div>
+    </form>
+  </body>
+</html>

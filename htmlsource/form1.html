@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 폼 태그(중요)
+        form : 사용자가 뭔가를 입력하는 형태로 만들어진 모든 것
+        <form method="보내는 방법">
+            method :  method 속성을 사용하지 않으면 get 방식으로 전송됨
+                폼 안의 데이터들을 감싸서 보낼 것인가?(post) 
+                ex) 아이디,비밀번호
+                주로 로그인할때 정보를 감춰야할때 처리하는 방식
+                보여주면서 보낼 것인가?(get)
+                - ~~라고 입력했어라고 주소줄에 보여주는 방식
+                https://product.kyobobook.co.kr/detail/S000200550190 디테일 뒤에 부분
+            action: 폼 안의 데이터를 전송할 주소(페이지)
+                    : 벡엔드 프로그램이 들어올 부분
+                    name 속성은 필수로 써줘야 한다
+    -->
+    <form method="get" action="ex.html">
+      <p>
+        <label for="">이름</label>
+        <input type="text" name="name" id="name" />
+      </p>
+      <p>
+        <label for="">나이</label>
+        <input type="text" age="age" id="age" />
+      </p>
+      <p>
+        <label
+          >전화번호
+          <input type="text" name="tel" />
+        </label>
+      </p>
+      <p>
+        <!-- submit : 현재 폼을 action 지정한 곳으로 전송 역할-->
+        <input type="submit" value="전송" />
+      </p>
+    </form>
+    <!--file:///C:/source/websource/htmlsource/ex.html?name=%ED%99%8D%EA%B8%B8%EB%8F%99&age=12
+                                                        ?name=홍길동&age=12 뒤에 이렇게 들어온다-->
+  </body>
+</html>
