@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* font : 글꼴 속성을 한꺼번에 묶어 표현
+            font : font-style font-variant font-weight font-size/line-height font-family
+        */
+      p {
+        font: italic 20px "맑은 고딕";
+      }
+      /* font-family : 글꼴, 글꼴명에 공백이 있다면 꼭 '' 로 묶어주면 됨
+                        여러개의 글꼴을 지정해놓으면 그 사용자에 컴퓨터에 해당 글꼴이
+                        없을시 다음 글꼴 다음 글꼴로 나타낼 수 있다
+      */
+      div {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5; /* 32px(글자 크기 변경 시 같이 바뀌어야 함), 글자의 1.5배*/
+      }
+      .shadow1 {
+        color: orange;
+        text-shadow: 1px 2px; /* 가로거리 세로거리 번짐정도 색상*/
+      }
+      .shadow2 {
+        text-shadow: 5px 5px 3px rgb(45, 21, 182);
+      }
+      .shadow3 {
+        color: aqua;
+        text-shadow: 7px -7px 5px #2715ca;
+      }
+      .letter {
+        font-size: 20px;
+        letter-spacing: -2px; /*자간*/
+      }
+      .word {
+        font-size: 20px;
+        word-spacing: 20px; /* 단어 사이의 간격*/
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      여러 요소가 함께 사용된 웹 문서 안에서 텍스트가 눈에 띄게 하려면 내용에
+      맞는 글꼴과 글자 크기,그리고 글자색을 선택하는 것이 중요합니다
+    </p>
+    <p>이럴 때 사용할 수 있는 것이 글꼴 속성입니다.</p>
+    <div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus eaque
+      dolore consequatur quae exercitationem numquam necessitatibus, rem, labore
+      dignissimos et illo ullam harum ex, ipsam quod ipsa. Perferendis, dolore.
+      Facere?
+    </div>
+    <h1 class="shadow1">HTML5</h1>
+    <h1 class="shadow2">HTML5</h1>
+    <h1 class="shadow3">HTML5</h1>
+  </body>
+  <p class="letter">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos! Ea
+    facilis sint asperiores porro beatae. Iure cum, praesentium quod officia,
+    similique non laborum maxime impedit illum odit aut beatae.
+  </p>
+  <p class="word">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos provident
+    incidunt error deserunt tempore dolores illum corporis commodi consequatur
+    maiores, ducimus animi vel reiciendis ex. Ipsam, at? Totam, est molestiae!
+  </p>
+</html>

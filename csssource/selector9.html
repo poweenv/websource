@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <style>
+      a[href] {
+        text-decoration: none;
+      }
+      a[target="_blank"] {
+        background-color: antiquewhite;
+        color: aqua;
+      }
+      .flat {
+        background: blue;
+        color: white;
+      }
+      [class~="button"] {
+        border: 2px solid black;
+        box-shadow: rgba(0, 0, 0, 0.4) 5px 5px;
+      }
+      [title|="us"] {
+        border: 2px solid black;
+      }
+      [title^="eng"] {
+        background-color: cyan;
+      }
+      [title^="chin"] {
+        background-color: aquamarine;
+      }
+      [href$="hwp"] {
+        background-color: aquamarine;
+        padding: 0.5px;
+      }
+      /* but_ 로 시작하는 button : 글자 굵게 */
+      [class^="btn_"] {
+        font-weight: bold;
+        border-radius: 20px; /* 테두리 둥글게*/
+        padding: 10px; /* 안쪽 여백(상,하,좌,우)*/
+      }
+      /* success 끝나는 button 글자 색상 green */
+      [class$="success"] {
+        color: green;
+      }
+      [class$="danger"] {
+        color: red;
+      }
+      /* danger 끝나는 button 글자 색상 red */
+    </style>
+  </head>
+  <body>
+    <!--
+        스타일 지정을 위해 앞 쪽에 쓰는 선택자는 다양하게 존재함
+        1) 태그 선택자
+        2) 전체 선택자
+        3) class 선택자
+        4) id 선택자  : 한 페이지 내에서 중복 불가(에러는 나지 않음)
+        5) 자손(하위) 선택자 : 부모 자손(자식 + 손자)
+                              div h2
+        6) 자식 선택자 : 부모 > 자식 div > h2
+        7) 인접 형제 선택자 : +, ~
+        8) 그룹화
+        9) 속성 선택자 : [속성]
+          [속성 = 값] : 특정 값을 갖는 속성에 스타일 지정
+          [속성 ~= 값] : 여러 값 중 특정 값을 포함하는 속성에 스타일 지정
+          [속성 |= 값] : 위랑 동작은 비슷하나 값- 시작하는 걸 추가로 선택해 줌
+          [속성 ^= 값] : 특정 값으로 시작하는 속성에 스타일 지정
+          [속성 $= 값] : 특정 값으로 끝나는 속성에 스타일 지정
+        10) 가상 클래스(pseudo class : 슈도 클래스) 선택자
+          :link : 방문하지 않은 링크에 스타일 적용
+          :visited : 방문한 링크에 스타일 적용
+          :hover : 웹 요소에 커서를 올려 놓을 때 스타일 적용
+          :active : 웹 요소를 활성화 했을 때 스타일 적용
+          :focus : 웹 요소에 초점이 맞춰졌을 때 스타일 적용
+
+    -->
+
+    <h1 id="title">CSS 기본 문법</h1>
+    <h2>속성 선택자</h2>
+    <ul>
+      <li><a href="http:www.google.com" target="_blank">google</a></li>
+      <li><a href="http:www.naver.com" target="_blank">naver</a></li>
+      <li><a href="http:www.daum.net" target="_self">daum</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">menu 1</a></li>
+      <li><a href="#">menu 2</a></li>
+      <li><a href="#" class="button">menu 3</a></li>
+      <li><a href="#" class="flat button">menu 4</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">외국어 서비스</a></li>
+      <li><a href="#" title="us">영어</a></li>
+      <li><a href="#" title="us-english">영어</a></li>
+      <li><a href="#" title="japanese">일어</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">외국어 서비스 : </a></li>
+      <li><a href="#" title="us">영어</a></li>
+      <li><a href="#" title="japanese">일본어</a></li>
+      <li><a href="#" title="chinese">중국어</a></li>
+    </ul>
+    <ul>
+      <li><a href="intro.hwp">hwp 파일</a></li>
+      <li><a href="intro.xls">엑셀 파일</a></li>
+    </ul>
+    <!-- button, input => 버튼 작성
+          <input type="submit"> ==<button type="submit"> (타입 생략시 기본값은 submit)
+          <input type="reset"> == <button type="reset">
+          <input type="button"> == <button type="button">
+
+    -->
+    <div>
+      <button class="btn_success">Success</button>
+      <button class="btn_danger">Danger</button>
+      <button>Normal</button>
+
+      <input type="submit" value="전송" />
+      <input type="reset" value="초기화" />
+      <input type="button" value="버튼" />
+    </div>
+  </body>
+</html>
