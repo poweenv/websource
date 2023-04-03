@@ -12,12 +12,12 @@
                 특정 태그에만 사용해야 하는 속성
                 : <a href>
         
-        전역속성 : 모든 태그에 사용하는 속성
-        1) class : 값은 중복될 수 있음
-        2) id
-        3) style
-        4) data-*
-        5) name
+        전역속성 : 모든 태그에 사용하는 속성 => css, script 중요하게 사용
+        1) class  : 값은 중복될 수 있음
+        2) id     : 한페이지 내에서 중복되면 안됨
+        3) style  : 디자인을 인라인 방식으로 지정할 때 사용
+        4) data-* : 사용자 정의 데이터 속성 지정할 때 사용(* : 지정하고 싶은 텍스트 가능)
+        5) name   : 필드 이름 지정
 
      -->
     <h1
@@ -27,6 +27,6 @@
       data-head="header"
       style="font-size: 50px"
     ></h1>
-    <h2 class="header">헤더2</h2>
+    <h2 class="header" id="header2">헤더2</h2>
   </body>
 </html>
