@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        list-style-type: decimal;
+        list-style-position: inside;
+        /* list-style-image: -moz-linear-gradient(); */
+
+        list-style: disc inside; /*  type, position 한꺼번에 처리 */
+      }
+      .b {
+        list-style-type: upper-roman;
+      }
+      .c {
+        list-style-type: lower-latin;
+        list-style-position: outside;
+      }
+      .d {
+        list-style-type: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 목록 스타일 
+         1) 순서 없는 목록 : disc(기본), circle(빈원),square,none
+         2) 순서 있는 목록 : decimal(기본), lower-alpha,lower-roman, upper-alpha,upper-roman
+    -->
+
+    <ol class="a">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ol>
+    <ol class="b">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ol>
+    <ol class="c">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ol>
+    <ol class="d">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JAVASCRIPT</li>
+    </ol>
+  </body>
+</html>

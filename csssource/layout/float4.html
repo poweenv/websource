@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #ddd;
+      }
+      .box {
+        background-color: wheat;
+        /* height: 50px;
+        overflow: visible; */
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      p {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- overflow : 부모 요소의 크기보다 자식요소가 더 커서 자식요소가 넘치는 상황
+         overflow:hidden = > 넘친 부분 잘라내고 보이지 않음
+         overflow: auto; => 넘친 부분이 있는 경우만 잘라내고, 스크롤바를 이용하여 볼 수 있도록 해줌
+         overflow: scroll; => 넘는 부분 잘라내고, 스크롤바(수평,수직)를 이용하여 볼 수 있도록
+         overflow: visible => 기본, 넘친 부분을 그대로 보여주기
+    -->
+    <div class="box">
+      <img src="left-arrow.png" alt="left-arrow" class="left" />
+      <img src="right-arrow.png" alt="right-arrow" class="right" />
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid
+      fuga repudiandae odio ducimus voluptas rerum, in nam magnam tempora eum
+      obcaecati autem ipsam cupiditate debitis sunt laborum repellendus
+      officiis?
+    </p>
+  </body>
+</html>

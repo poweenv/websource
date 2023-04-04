@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: auto;
+        height: auto;
+        background: blueviolet;
+        margin: 10px; /*바깥쪽여백*/
+        display: inline;
+      }
+      span {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      p {
+        text-align: center;
+      }
+      p a {
+        background-color: rgb(219, 101, 5);
+        width: 40px;
+        height: 40px;
+        color: aqua;
+        display: inline-block;
+
+        text-decoration: none;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div 
+      블럭 요소  : width : 100% 개념  heeei
+                  width, heihgt =>
+      
+      span
+      인라인 요소 : width : 0, heigth : 0 내용에 따라 변화
+                  width,height ==> 임의의 값 줄 수 없음
+
+        display : inline-block(inline + block), inline, block, none
+
+-->
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+    </p>
+    <span></span>
+    <div class="hidden">Hidden Area</div>
+  </body>
+</html>
