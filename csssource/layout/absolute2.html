@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding-top: 100px;
+      }
+      .container {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        background-color: yellowgreen;
+        position: relative; /* absolute 요소의 부모 */
+      }
+      .box {
+        height: 100px;
+        position: absolute;
+      }
+      .a {
+        background-color: aqua;
+        right: 100%;
+        /* 부모의 크기가 고정이라면 px 상관없으나,
+         부모의 크기가 유동이라면 %n 값을 써도 된다  */
+        top: 100px;
+      }
+      .b {
+        background-color: blue;
+
+        left: 200px;
+        top: 100px;
+      }
+      .c {
+        background-color: blueviolet;
+        left: 95%;
+        bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- position:absolute;
+      단독으로 쓰이진 않음
+      위치 상 부모 요소를 기준으로 배치
+      부모요소 : position 값이 부여된 다른 요소
+                position 값이 부여된 다른 요소가 없다면 화면이 기준임 -->
+    <!-- layout 다음 -->
+    <div class="container">
+      <div class="box a">Box AAAAAA</div>
+      <div class="box b">Box B</div>
+      <div class="box c">Box CCCC</div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
+      ex et, maiores natus est eligendi. Consectetur iusto eos, aut accusantium
+      harum quibusdam deleniti magnam porro, vel doloremque sequi, recusandae
+      consequuntur.
+    </p>
+  </body>
+</html>
