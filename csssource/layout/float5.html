@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: #ffd800;
+        margin-right: 10px;
+        float: left;
+      }
+
+      .box1 {
+        width: 150px;
+        height: 150px;
+        background: darkorchid;
+        margin-right: 10px;
+        border: 1px solid black;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+        /* 클리어박스라고 지정된 다음(after)에 새로운 content(비어있음)를 넣고 float를 해제하고 
+        가상 요소에 주고 뒤에 영향을 주지 않게 한다
+        직접적으로 주지않고 float으로 흐르는 요소를 
+        가상 요소(display: block)로 막고 clear: both로 float를 끝내는 방법이다
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="box">박스1</div>
+      <div class="box">박스2</div>
+      <div class="box">박스3</div>
+    </div>
+    <div class="box1">박스4</div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam
+      officiis, in vel sint corrupti corporis dolore provident ipsam numquam
+      nisi omnis aliquid nobis adipisci quas quis sed dolorum voluptatibus!
+    </p>
+  </body>
+</html>

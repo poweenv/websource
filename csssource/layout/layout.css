@@ -1,0 +1,36 @@
+/* 모든 div 테두리 표시 : 1px solide #ccc */
+div {
+  border: 1px solid #ccc;
+}
+/* container의 너비 960px 안쪽여백 20px 화면 중앙 배치 */
+#container {
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+}
+/* header : 안쪽여백(padding) 20px, 아래쪽 바깥 여백 20px */
+#header {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* 본문:왼쪽배치, 너비 620, 안쪽여백 20, 아래쪽 바깥여백 20 */
+#contents {
+  float: left;
+  width: 620px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* 사이드바 : 오른쪽 배치
+    너비 220, 안쪽여백 20, 아래쪽 바깥여백 20
+    */
+#sidebar {
+  width: 220px;
+  float: right;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* 푸터 : float 요소 해제, 안쪽 여백 20px*/
+#footer {
+  clear: both;
+  padding: 20px;
+}

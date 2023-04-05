@@ -1,0 +1,23 @@
+body {
+  background-color: #222;
+}
+.grid {
+  width: 500px;
+  margin: 0 auto;
+  background-color: white;
+}
+.grid-item {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-item.a {
+  background-color: orange;
+}
+.grid-item.b {
+  background-color: orangered;
+}
+.grid-item.c {
+  background-color: red;
+}
