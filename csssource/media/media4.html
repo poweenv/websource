@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 12:06 고쳤는데 다시 보기*/
+      /* 모든 요소의 크기는 border 포함 */
+
+      * {
+        box-sizing: border-box;
+      }
+      /* body: font-family : Open Sans, 배경색:#ecf0f1 */
+      body {
+        font-family: "Open Sans";
+        background-color: #ecf0f1;
+      }
+      /* wrapper : width : 100%, margin : updown 2rem leftright center, max-width : 60rem */
+      .wrapper {
+        width: 100%;
+        margin: 2rem auto;
+        max-width: 60rem;
+      }
+      .flexbg {
+        display: flex;
+      }
+      .flexbg main {
+        order: 2;
+        width: 60%;
+        padding: 1.618rem;
+      }
+      .flexbg .sidebar {
+        color: white;
+        width: 20%;
+        padding: 1.618rem;
+      }
+      .flexbg .left {
+        order: 1;
+        background-color: yellowgreen;
+      }
+      .flexbg .right {
+        background-color: violet;
+        order: 3;
+      }
+      /* 최대 768px */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          flex-wrap: wrap;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg main {
+          order: 1;
+          width: 60%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+      }
+      /* 최대 480px */
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus,
+          tempore corrupti! Corporis, iure repudiandae ut dolore dolores nisi
+          doloremque esse officiis dolor explicabo? Unde animi distinctio
+          molestiae repellat officia tempore!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          vitae provident aut cumque voluptas perspiciatis suscipit. Dolor in
+          molestiae laborum quam quae aperiam explicabo voluptatum, dolore illo
+          fugit! Beatae, nostrum.
+        </p>
+      </main>
+      <aside class="sidebar left">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
+        officiis laboriosam, obcaecati in modi deserunt blanditiis reiciendis
+        sit culpa voluptate similique ea nobis? Voluptatem odio autem officiis.
+        Aperiam, voluptates ipsam!
+      </aside>
+      <aside class="sidebar right">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores
+        assumenda mollitia laboriosam repellat quidem, deleniti delectus!
+        Deleniti quidem adipisci distinctio accusamus aliquid quae minima
+        explicabo atque, sed, officia earum repellendus?
+      </aside>
+    </div>
+  </body>
+</html>
