@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var > con > type > oper
+
+      // 연산자
+      // 산술, 비교, 연결
+      let a = 4,
+        b = 5;
+
+      console.log("a+b = ", a + b);
+      console.log("a-b = ", a - b);
+      console.log("a*b = ", a * b);
+      console.log("a/b = ", a / b);
+      console.log("a%b = ", a % b);
+
+      console.log("a==b = ", a == b);
+      console.log("a!=b = ", a != b);
+
+      // ==, != : 값만 비교
+      //===,!== : 값과 타입 비교
+
+      let c = "4";
+      console.log("a == c = ", a == c);
+      console.log("a === c = ", a === c);
+      console.log("a != c = ", a != c);
+      console.log("a !== c = ", a !== c);
+
+      let d = "3";
+      // "4"+"3" : 43 (+ : 연결연산자)
+      console.log("c + d = ", c + d);
+      //  4+ "3" : 43 (+ : 연결연산자)
+      console.log("a + d = ", a + d);
+      // 4-"3", 4*"3", 4/"3" ==> 연산이 일어남
+      console.log("a - d = ", a - d);
+      console.log("a * d = ", a * d);
+      console.log("a / d = ", a / d);
+    </script>
+  </body>
+</html>

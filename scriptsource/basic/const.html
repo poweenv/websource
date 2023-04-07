@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- myscript,var1,2,3 다음 -->
+    <script>
+      // const : 블록레벨 스코프
+      const value1 = 10;
+      console.log(value1);
+
+      if (true) {
+        const value1 = 20;
+        console.log(value1);
+      }
+      // Uncaught TypeError: Assignment to constant variable.
+      // 재할당 불가(상수는 처음에 할당된 값 유지)
+      //   value1 = 15;
+      // Uncaught SyntaxError: Identifier 'value1' has already been declared
+      // 재선언 불가
+      //   const value1 = 15;
+    </script>
+  </body>
+</html>

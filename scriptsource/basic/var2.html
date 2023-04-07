@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var : 변수 재선언 가능, 할당, 함수레벨 스코프
+      var value1 = 3; //선언, 할당
+      console.log(value1);
+
+      var value1 = 5; //재선언, 할당
+      console.log(value1);
+
+      var value1 = 7;
+      console.log(value1); //재할당
+      // let : 변수 재선언 불가, 할당, 블록레벨 스코프
+      let value2 = 6;
+      console.log(value2);
+
+      // let value2 = 4;
+      // Uncaught SyntaxError: Identifier 'value2' has already been declared (at var2.html:24:11) 재선언 불가
+
+      value2 = 8;
+      console.log(value2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 마지막
+      document.write(Math.E + "<br>");
+      document.write(Math.PI + "<br>");
+      document.write(Math.floor(3.14159) + "<br>");
+      document.write(Math.ceil(2.123) + "<br>");
+      document.write(Math.abs(-3) + "<br>");
+      document.write(Math.max(5, 6, 7, 8, 9) + "<br>");
+      document.write(Math.min(1, 2, 3, 4, 8) + "<br>");
+      document.write(Math.sqrt(36) + "<br>");
+
+      // 0 <= Math.random() <1
+      document.write(Math.random() + "<br>");
+      document.write(Math.random() * 10 + "<br>");
+      document.write(Math.floor(Math.random() * 11) + "<br>"); //0~10
+      document.write(Math.floor(Math.random() * 31) + "<br>"); //0~30
+      document.write(Math.floor(Math.random() * 31) + 120 + "<br>"); //120~150
+
+      //임의의 번호 6개 추출 후 배열에 담기
+      // 1~45
+      // 출력
+
+      let lotArr = [];
+      while (true) {
+        let num = Math.floor(Math.random() * 45) + 1;
+        lotArr.push(num);
+
+        if (lotArr.length > 5) break;
+      }
+      document.write("lotto number ", lotArr);
+    </script>
+  </body>
+</html>

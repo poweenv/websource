@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- if 다음 -->
+    <script>
+      //수학,영어,국어 점수를 입력받은 후 평균을 구한 뒤
+      // 평균에 따라 성적 출력
+      // >=90 : a, >=80 B, >=70 :C, >=60 D, F
+
+      // alert() : 경고창
+      // prompt() : 사용자에게 입력받기
+      // comfirm() : 확인, 취소 선택
+
+      let kor = Number(prompt("typing kor point", "number1"));
+      let eng = Number(prompt("typing eng point", "number2"));
+      let math = Number(prompt("typing math point", "number3"));
+
+      let avg = (kor + eng + math) / 3;
+      // if ~else if => switch
+      switch (parseInt(avg / 10)) {
+        case 10:
+        case 9:
+          document.write("A");
+          break;
+        case 8:
+          document.write("B");
+          break;
+        case 7:
+          document.write("C");
+          break;
+        case 6:
+          document.write("D");
+          break;
+        default:
+          document.write("F");
+          break;
+      }
+    </script>
+  </body>
+</html>

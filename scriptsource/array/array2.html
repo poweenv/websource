@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruit = ["apple", "mango", "grape", "melon", "grape", "cherry"];
+
+      // push(): 배열의 끝에 요소 추가
+      fruit.push("papaya");
+
+      //unshift() : 맨 앞에 요소 추가
+      fruit.unshift("peach");
+
+      // 지정된 위치에 추가
+      fruit[2] = "orange";
+
+      for (let i = 0; i < fruit.length; i++) {
+        document.write(fruit[i] + "<br>");
+      }
+
+      document.write("<p> 요소 삭제</p>");
+      // pop() : 마지막 요소 삭제
+      fruit.pop();
+
+      // shift() : 첫번째 요소 삭제
+      fruit.shift();
+
+      // splice(위치,갯수)
+      fruit.splice(2, 2);
+
+      fruit.forEach((i) => {
+        document.write(i + "<br>");
+      });
+    </script>
+  </body>
+</html>
