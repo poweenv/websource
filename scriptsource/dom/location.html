@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button">move</button>
+    <script>
+      //location.reload(); // 새로고침
+      // location.replace("이동 경로") : 이동 경로로 이동     경로제거
+      // location.href="이동경로" 경로보존
+      const move = function () {
+        location.replace("https://www.naver.com");
+        //  location.href = "https://www.naver.com";
+      };
+      //move();
+      document.querySelector("button").addEventListener("click", move);
+    </script>
+  </body>
+</html>

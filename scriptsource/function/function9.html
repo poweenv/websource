@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .alert-danger {
+        height: 60px;
+        color: #58151c;
+        border: 1px #f1aeb5 solid;
+        border-radius: 10px;
+        background-color: #f8d7da;
+        line-height: 60px;
+        padding-left: 30px;
+      }
+      /* 화면에서 안보이게
+      display:none;  or    
+      visibility: hidden; 
+      둘의 차이는 영역을 차지 할거냐 말거냐*/
+    </style>
+  </head>
+  <body>
+    <div class="alert alert-danger">
+      <span>10</span>초 이내에 상품 구매시 사은품 증정!!
+    </div>
+
+    <script>
+      // console.log("start");
+      // setTimeout(() => {
+      //   //      div 화면에서 안보이게
+      //   document.querySelector(".alert").style.dispaly = "none";
+      // }, 10000); //timeout : 시간지정( ms 단위로 지정)
+      // console.log("finish");
+      let count = 10;
+      // setInterval  일정 시간을 기준으로 화면이 바뀌다던가 사라져야되는게 있다면 실행시켜주는 비동기 함수
+      // : 비동기 함수( 다른 함수의 실행 여부와 상관없이 따로 동작!!)
+      setInterval(() => {
+        //뭔가 틀렷는데 나중에 고치기
+        count = -1;
+        if (count >= 0) {
+          document.querySelector(".alert span").innerHTML = count;
+        } else {
+          document.querySelector(".alert").style.display = "none";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
