@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <button type="button">click1</button>
+    <button type="button">click2</button>
+    <script>
+      // 이벤트 : 버튼 클릭
+      // 핸들러 : 첫번째 버튼 클릭되면 안녕하세요, 두번째 버튼 클릭되면 안녕히 가세요
+
+      // 이벤트 대상 요소 찾기
+      const btns = document.querySelectorAll("button");
+
+      console.log(btns[0]);
+      console.log(btns[1]);
+
+      // 이벤트 리스너와 연결
+      btns[0].onclick = function showDialog() {
+        alert("hello");
+      };
+      function showDialog2() {
+        alert("good bye");
+      }
+      // btns[1].addEventListener("click", showDialog2);
+
+      btns[1].addEventListener("click", () => alert("good bye"));
+    </script>
+  </body>
+</html>

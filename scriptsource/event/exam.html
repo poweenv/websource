@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">JavaScript can change html content</p>
+    <button type="button">change</button>
+
+    <button type="button" id="turn-on">Turn on the light</button>
+    <img src="../image/pic_bulboff.gif" alt="" />
+    <button type="button" id="turn-off">Turn off the light</button>
+    <p id="p1">This is a paragraph.</p>
+    <input type="button" value="요소 숨김" id="hidden" />
+    <input type="button" value="요소 보이기" id="visible" />
+
+    <script>
+      // 버튼 클릭 시 p 태그 안의 내용 변경 Hello JavaScript
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", () => {
+        document.getElementById("demo").innerHTML = "Hello JavaScript";
+      });
+      const turnOn = document.querySelector("#turn-on");
+      const turnOff = document.querySelector("#turn-off");
+      const img = document.querySelector("img");
+      // turn-on 버튼 클릭 시 img src를 pic_bulbon.gif 변경
+      turnOn.addEventListener(
+        "click",
+        () => (img.src = "../image/pic_bulbon.gif")
+      );
+      // turn-off 버튼 클릭 시 img src 를 pic_bulboff.gif로 변경
+      turnOff.addEventListener(
+        "click",
+        () => (img.src = "../image/pic_bulboff.gif")
+      );
+
+      // 요소 숨김 클릭 시 p1 안 보이게
+      // 요소 보이기 클릭 시 p1 보이게
+      const hid = document.querySelector("#p1");
+      document.querySelector("#hidden").addEventListener("click", () => {
+        hid.style.visibility = "hidden";
+      });
+      document.querySelector("#visible").addEventListener("click", () => {
+        hid.style.visibility = "visible";
+      });
+    </script>
+  </body>
+</html>
