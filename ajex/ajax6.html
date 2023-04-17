@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        background: lightblue;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container li {
+        margin: 0 10px;
+        width: 25%;
+        list-style: none;
+      }
+      div {
+        margin: 20px;
+      }
+      table,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li>menu 1</li>
+      <li>menu 2</li>
+      <li>menu 3</li>
+      <li>menu 4</li>
+    </ul>
+    <div></div>
+    <script>
+      //ajax(Asynchronous JavaScript and XML)
+      //동기식 : 서버와 통신할 때 전체 페이지를 리프레시 하는 방식
+      //비동기식 : 서버와 통신하기 위해 데이터만 주고 받는 방식
+
+      // ajax 구현
+      // 1. 자바스크립트 XMLHttpRequest 객체 사용하기(==> 어렵다, 코드의 양이 많다)
+      // 2. fetch api 사용
+      // 3. axios 사용(node.js)
+
+      //   fetch("데이터를 가져올 서버 주소")
+      //     .then((reponse) => reponse.json()) // 가져온 데이터를 원하는 형태로 변경(파싱)
+      //     .then((data) => console.log(data)); // 변경된 데이터를 사용
+
+      // response.json(): json 응답을 자바스크립트 객체로 파싱
+      // JSON.stringify(data) : 자바스크립트 객체를 json으로 변경
+
+      // 메뉴 3 클릭하면
+      // school.xml 가져와서 화면에 보여주기(refresh 없이)
+      const li = document.querySelector(".container li:nth-child(3)");
+
+      const div = document.querySelector("div");
+
+      li.addEventListener("click", () => {
+        fetch("https://poweenv.github.io/data/school.xml")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("데이터가 없습니다.");
+            }
+
+            return response.text();
+          })
+          .then((date) => {
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(data, "application/xml");
+
+            let title = xml.querySelector("title");
+            let time = xml.querySelector("time");
+            let teacher = xml.querySelector("teacher");
+
+            let result = "<ul>";
+            result += "<li>title : " + title.textContent + "</li>";
+            result += "<li>time : " + time.textContent + "</li>";
+            result += "<li>teacher : " + teacher.textContent + "</li>";
+            result += "</ul>";
+
+            div.innerHTML = result;
+          })
+          .catch((err) => {
+            div.innerHTML = err;
+          });
+      });
+    </script>
+  </body>
+</html>

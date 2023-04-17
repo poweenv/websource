@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 300px;
+        height: 150px;
+        border: 2px solid black;
+        overflow: hidden;
+      }
+      .wrap {
+        width: 2100px;
+
+        transform: translate(0);
+        transition: all 0.25s;
+      }
+      .box {
+        width: 300px;
+        height: 150px;
+        float: left;
+      }
+      .box1 {
+        background-color: yellow;
+      }
+      .box2 {
+        background: red;
+      }
+      .box3 {
+        background: aqua;
+      }
+      .box4 {
+        background: darkcyan;
+      }
+      .box5 {
+        background: salmon;
+      }
+      .box6 {
+        background: wheat;
+      }
+      .box7 {
+        background: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+        <div class="box box6">box6</div>
+        <div class="box box7">box7</div>
+      </div>
+    </div>
+
+    <div class="btn-area">
+      <button type="button" class="prev">이전</button>
+      <button type="button" class="next">다음</button>
+    </div>
+    <script>
+      // 캐러셀 움직일 대
+      // size * 인덱스
+      const wrap = document.querySelector(".wrap");
+
+      let index = 0;
+      // 이전 클릭 시
+      document.querySelector(".prev").addEventListener("click", (e) => {
+        if (index == 0) return;
+        index -= 1;
+        //박스 위치 이동
+        wrap.style.transform = `translate(-${300 * index}px)`;
+      });
+
+      // 다음 클릭 시
+      document.querySelector(".next").addEventListener("click", (e) => {
+        if (index == 6) return;
+
+        index += 1;
+        //박스 위치 이동
+        wrap.style.transform = `translate(-${300 * index}px)`;
+      });
+    </script>
+  </body>
+</html>

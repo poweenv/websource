@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">상품명 / 가격</div>
+      <div class="name"></div>
+      <div class="price"></div>
+    </div>
+    <script>
+      // 상품 상세 페이지
+      // 배열 : ["sonata",5000,'white']
+      // object : {name:"소나타",price:50000,color:"white"}
+
+      const car = ["sonata", 5000, "white"];
+      // name 과 price 바인딩 시키기
+      // 자바스크립트가 가지고있는 값들을 페이지에 보여주는 것이 바인딩
+      document.querySelector(".name").innerHTML = car[0];
+      document.querySelector(".price").innerHTML = car[1];
+
+      const car2 = { name: "소나타", price: 50000, color: "white" };
+      document.querySelector(".name").innerHTML = car2["name"];
+      document.querySelector(".price").innerHTML = car2.price;
+
+      const car3 = {
+        name: "그랜져",
+        price: [60000, 70000, 80000],
+        color: "black",
+      };
+      document.querySelector(".name").innerHTML = car3["name"];
+      document.querySelector(".price").innerHTML = car3.price[1];
+    </script>
+  </body>
+</html>

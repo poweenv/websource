@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header 1</h1>
+    <h2>header 2</h2>
+    <h1 id="header" class="header">hEader 1</h1>
+    <h1 id="header2" class="header">hEader 2</h1>
+
+    <div id="top"></div>
+
+    <div>
+      <label for="word3">word2</label>
+      <input type="text" name="word3" id="word3" value="ABCDEF" />
+    </div>
+    <p>good morning</p>
+    <script>
+      const h1 = document.querySelector("h1");
+      h1.remove();
+      const nested = document.getElementById("nested");
+      nested.remove();
+
+      const top = document.getElementById("top");
+
+      const nested1 = document.getElementById("nested1");
+      top.removerChild(nested1);
+
+      const h2 = document.querySelector("hi");
+      h2.removeAttribute("class");
+      const H2 = document.querySelector("h2");
+      h2.removeAttribute("id");
+      h2.innerHTML = "";
+
+      let h11 = document.getElementById("header");
+      console.log(h11.classList);
+      h1.classList.replace("one,header");
+
+      h11.classList.add("three");
+      h1.classList.toggle("four");
+      h1.classList.remove("header");
+
+      const h12 = document.querySelector("#header");
+
+      h1.style.cssText = "color:blue;,border: 1px solid red; padding: 10;";
+
+      document
+        .querySelector("#word1")
+        .addEventListener(
+          "change",
+          (e) => (e.target.value = e.target.value.toLowerCase())
+        );
+
+      document.querySelector("#word2").addEventListener("blur", (e) => {
+        console.log(e.target);
+        e.target.value = e.target.value.toLowerCase();
+      });
+
+      document.querySelector("#word3").addEventListener("input", (e) => {
+        console.log("word3", e.target);
+        e.target.value = e.target.value.toLowerCase();
+      });
+
+      document
+        .querySelectorAll("select")
+        .addEventListener("change", (e) => console.log(e.target.value));
+
+      const table = document.getElementById("outside");
+
+      table.addEventListener("click", () => {
+        const t2 = document.getElementById("t2");
+        const isThree = t2.innerText === "three";
+        t2.innerText = isThree ? "two" : "three";
+      });
+      document.getElementById("demo").addEventListener("click", (e) => {
+        console.log(e.target);
+        e.target.innerText = "good job";
+      });
+
+      const radio = document.querySelectorAll("[name]'color");
+
+      function changeColor(color) {
+        document.body.style.background = color;
+      }
+    </script>
+  </body>
+</html>

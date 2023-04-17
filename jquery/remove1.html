@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <div id="top">
+      <div id="nested">내용</div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
+        cupiditate, explicabo corporis, dicta necessitatibus aliquid esse ipsam
+        vel illum voluptas exercitationem architecto non alias voluptatibus aut
+        ab ipsa aspernatur accusamus.
+      </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+      const h1 = $("h1");
+      h1.remove();
+
+      // const nested = document.getElementById("nested");
+      // nested.remove();
+
+      //부모
+      const top = $("#top");
+
+      //제거대상 자식
+      const nested = $("#nested");
+      top.removeChild(nested);
+    </script>
+  </body>
+</html>

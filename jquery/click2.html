@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="radio" name="color" id="" value="파랑색" />blue
+      <input type="radio" name="color" id="" value="녹색" />green
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+      // 이벤트 대상 = radio
+      const rdos = $("[name='color']");
+      console.log(rdos);
+      function changeColor(color) {
+        $("body").css("background", color);
+      }
+
+      rdos.on("click", function () {
+        if ($(this).val() === "파랑색") changeColor("lightblue");
+        else changeColor("green");
+      });
+    </script>
+  </body>
+</html>
